@@ -11,7 +11,7 @@ fn main() {
     let window = Window::new(WindowType::Toplevel);
     window.set_title("First GTK+ Program");
     window.set_default_size(350, 70);
-    let button = Button::new_with_label("Click me!");
+    let button = Button::with_label("Click me!");
     window.add(&button);
     window.show_all();
 
