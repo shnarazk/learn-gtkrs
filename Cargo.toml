@@ -2,6 +2,7 @@
 name = "gtkrs"
 version = "0.2.0"
 authors = ["shujinarazaki <shujinarazaki@protonmail.com>"]
+edition = "2021"
 
 [dependencies]
 gtk4 = { version = "^0.4", features = ["v4_6"] }
