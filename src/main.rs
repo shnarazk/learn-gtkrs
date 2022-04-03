@@ -1,7 +1,8 @@
 use {
-    gtk4::prelude::*,
-    gtk4::{Application, ApplicationWindow, Button, Orientation},
+    gtk::prelude::*,
+    gtk::{Application, ApplicationWindow, Button, Orientation},
     std::{cell::Cell, rc::Rc},
+    // crate::custom_button::CustomButton,
 };
 
 fn main() {
@@ -30,7 +31,7 @@ fn build_ui(app: &Application) {
     let number = Rc::new(Cell::new(0i32));
     let number_inc = number.clone();
     let number_dec = number;
-    // let number_value = gtk4::Label::builder()
+    // let number_value = gtk::Label::builder()
     //     .label(&format!("{}", number.get()))
     //     .build();
     button_increase.connect_clicked(move |_| {
@@ -39,7 +40,7 @@ fn build_ui(app: &Application) {
     button_decrease.connect_clicked(move |_| {
         number_dec.set(number_dec.get() - 1);
     });
-    let gtk_box = gtk4::Box::builder()
+    let gtk_box = gtk::Box::builder()
         .orientation(Orientation::Vertical)
         .build();
     gtk_box.append(&button_increase);
